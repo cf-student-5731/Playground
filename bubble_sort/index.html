@@ -8,21 +8,21 @@
 <script>
 	arr=[10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
-	var done = false;
-	for (j = 0; j<=9; j++){
+	swapped = true;
+
+	do{
+		swapped = false;
 		for(var i=0; i<=9; i++){
 			if (arr[i] > arr[i+1]){
 				var h = arr[i+1];
 				arr[i+1] = arr[i];
 				arr[i] = h;
+				swapped = true;
 			}
-			else{
-				done = true;
-			}
-			document.write(arr + '<br>');
 		}
-	}
-</script>
+			document.write(arr + '<br>');
+	} while (swapped);
 
+</script>
 </body>
 </html>
